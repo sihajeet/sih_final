@@ -34,22 +34,25 @@ class _WithBuilder extends State<WithBuilder> {
   List<ItemData> data = [
     // ItemData(Colors.green, "assets/onboarding/on_boarding_image_2.jpg", "Liked?", tOnBoardingTitle1, tOnBoardingSubTitle1),
     ItemData(
-        color: Colors.green,
-        image: 'assets/onboarding/on_boarding_image_1.jpg',
-        text1: tOnBoardingTitle1,
-        text2: tOnBoardingSubTitle1),
+      color: Colors.green,
+      image: 'assets/onboarding/on_boarding_image_1.jpg',
+      text1: tOnBoardingTitle1,
+      text2: tOnBoardingSubTitle1,
+    ),
 
     ItemData(
-        color: Colors.red,
-        image: 'assets/onboarding/on_boarding_image_2.jpg',
-        text1: tOnBoardingTitle2,
-        text2: tOnBoardingSubTitle2),
+      color: Colors.red,
+      image: 'assets/onboarding/on_boarding_image_2.jpg',
+      text1: tOnBoardingTitle2,
+      text2: tOnBoardingSubTitle2,
+    ),
 
     ItemData(
-        color: Colors.blue,
-        image: 'assets/onboarding/on_boarding_image_3.jpg',
-        text1: tOnBoardingTitle3,
-        text2: tOnBoardingSubTitle3),
+      color: Colors.blue,
+      image: 'assets/onboarding/on_boarding_image_3.jpg',
+      text1: tOnBoardingTitle3,
+      text2: tOnBoardingSubTitle3,
+    ),
   ];
 
   @override
@@ -66,7 +69,7 @@ class _WithBuilder extends State<WithBuilder> {
       ),
     );
     double zoom = 1.0 + (2.0 - 1.0) * selectedness;
-    return Container(
+    return SizedBox(
       width: 25.0,
       child: Center(
         child: Material(
@@ -182,7 +185,7 @@ class _WithBuilder extends State<WithBuilder> {
                 padding: const EdgeInsets.all(25.0),
                 child: TextButton(
                   onPressed: () {
-                    if (liquidController.currentPage + 1 > data.length - 1 ) {
+                    if (liquidController.currentPage + 1 > data.length - 1) {
                       // Navigate to a new screen
                       Navigator.push(
                         context,
@@ -214,12 +217,12 @@ class _WithBuilder extends State<WithBuilder> {
       page = lpage;
     });
     // Check if we should navigate to a new screen
-    if (page + 1 > data.length ) {
+    if (page + 1 > data.length) {
       // Navigate to a new screen
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => LoginScreen(),
+          builder: (context) => const LoginScreen(),
         ),
       );
     }
