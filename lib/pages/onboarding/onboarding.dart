@@ -199,10 +199,10 @@ class _WithBuilder extends State<WithBuilder> {
                             ? 0
                             : liquidController.currentPage + 1);
                   },
-                  child: const Text("Next"),
                   style: TextButton.styleFrom(
                       backgroundColor: Colors.white.withOpacity(0.01),
                       foregroundColor: Colors.white),
+                  child: const Text("Next"),
                 ),
               ),
             )

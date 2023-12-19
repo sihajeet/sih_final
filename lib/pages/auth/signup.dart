@@ -11,8 +11,6 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-
-
   final formKey = GlobalKey<FormState>();
   final nameController = TextEditingController();
   final emailController = TextEditingController();
@@ -33,7 +31,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   image: const AssetImage(tWelcomeScreenImage),
                   height: size.height * 0.2,
                 ),
-                const SizedBox(height: 20,),
+                const SizedBox(
+                  height: 20,
+                ),
                 Form(
                   key: formKey,
                   child: Column(
@@ -50,25 +50,33 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       TextFormField(
                         controller: emailController,
                         decoration: const InputDecoration(
-                            label: Text(tEmail), prefixIcon: Icon(Icons.email_outlined),border: OutlineInputBorder()),
+                            label: Text(tEmail),
+                            prefixIcon: Icon(Icons.email_outlined),
+                            border: OutlineInputBorder()),
                       ),
                       const SizedBox(height: tFormHeight - 20),
                       TextFormField(
                         controller: phoneController,
                         decoration: const InputDecoration(
-                            label: Text(tPhoneNo), prefixIcon: Icon(Icons.numbers),border: OutlineInputBorder()),
+                            label: Text(tPhoneNo),
+                            prefixIcon: Icon(Icons.numbers),
+                            border: OutlineInputBorder()),
                       ),
                       const SizedBox(height: tFormHeight - 20),
                       TextFormField(
                         controller: passwordController,
                         decoration: const InputDecoration(
-                            label: Text(tPassword), prefixIcon: Icon(Icons.fingerprint),border: OutlineInputBorder()),
+                            label: Text(tPassword),
+                            prefixIcon: Icon(Icons.fingerprint),
+                            border: OutlineInputBorder()),
                       ),
                       const SizedBox(height: tFormHeight - 20),
                       TextFormField(
                         controller: selectlanguageController,
                         decoration: const InputDecoration(
-                            label: Text('language'), prefixIcon: Icon(Icons.language),border: OutlineInputBorder()),
+                            label: Text('language'),
+                            prefixIcon: Icon(Icons.language),
+                            border: OutlineInputBorder()),
                       ),
                       const SizedBox(height: tFormHeight - 10),
                       SizedBox(
@@ -91,14 +99,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                               //yaha par add kia hain maine function,baaki screens mein dikkat hori hain
 
-
                               // Get.to(() =>HomeStudent() );
                             }
                           },
                           child: Text(tSignup.toUpperCase()),
                         ),
                       ),
-                      Center(child: const Text("OR")),
+                      const Center(child: Text("OR")),
                       SizedBox(
                         width: double.infinity,
                         child: OutlinedButton.icon(
@@ -112,7 +119,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                       Center(
                         child: TextButton(
-                          onPressed: () =>Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>LoginScreen())),
+                          onPressed: () => Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => const LoginScreen())),
                           child: Text.rich(TextSpan(children: [
                             TextSpan(
                               text: 'already have account ?',
@@ -125,7 +135,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ],
                   ),
                 ),
-
               ],
             ),
           ),

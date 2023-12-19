@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 const String cLogo = "assets/images/logo.png";
 const String tWelcomeScreenImage = "assets/images/saraswati.png";
 
@@ -8,7 +6,6 @@ const String tLoginTitle = "Welcome Back,";
 const String tLoginSubTitle = "Make it work, make it right, make it fast.";
 const String tRememberMe = "Remember Me?";
 const String tDontHaveAnAccount = "Don't have an Account? ";
-
 
 // -- GLOBAL Texts
 const String tNext = "Next";
@@ -23,13 +20,10 @@ const String tSignInWithGoogle = "Sign-In with Google";
 
 const String tGoogleLogoImage = "assets/images/google.webp";
 
-
 //On boarding text
 const String tOnBoardingTitle1 = "Namaskaram! Welcome to Gurukul ";
-const String tOnBoardingTitle2 =
-    "Our Mission";
-const String tOnBoardingTitle3 =
-    "Interactive Learning";
+const String tOnBoardingTitle2 = "Our Mission";
+const String tOnBoardingTitle3 = "Interactive Learning";
 const String tOnBoardingSubTitle1 =
     "The gateway to the bright future. Embark on a journey to elevate your learning";
 const String tOnBoardingSubTitle2 =

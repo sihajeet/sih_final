@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:flutter/services.dart';
 
-
 class YtPlayer extends StatefulWidget {
   const YtPlayer({super.key, required this.url});
   final String url;
@@ -19,9 +18,11 @@ class _YtPlayerState extends State<YtPlayer> {
       DeviceOrientation.landscapeRight,
       DeviceOrientation.landscapeLeft,
     ]);
-    final videoID = YoutubePlayer.convertUrlToId(widget.url);
+    final videoID = widget.url;
+    // print(videoID);
+    debugPrint(widget.url);
     _controller = YoutubePlayerController(
-      initialVideoId: videoID!,
+      initialVideoId: videoID,
       flags: const YoutubePlayerFlags(
         autoPlay: true,
         mute: false,

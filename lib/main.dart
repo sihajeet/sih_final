@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:sih_final/pages/splash.dart';
 
 void main() {
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]).then((value) => runApp(const MyApp()));
   runApp(const MyApp());
 }
 
@@ -27,11 +32,10 @@ class MyApp extends StatelessWidget {
         ),
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
-          foregroundColor: Colors.black, // adjust text color for contrast
-          elevation: 1.0, // adjust elevation if desired
+          foregroundColor: Colors.black,
+          elevation: 1.0,
           titleSpacing: 0,
-          iconTheme: IconThemeData(
-              color: Colors.black), // adjust icon color for contrast
+          iconTheme: IconThemeData(color: Colors.black),
         ),
       ),
       home: const SplashScreen(),
