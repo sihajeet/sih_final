@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:sih_final/pages/splash.dart';
 
 void main() {
+  Gemini.init(apiKey: 'AIzaSyAQCo_lc1UOdimjMqA9IHxFkqAFs_7qO7s');
+
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,

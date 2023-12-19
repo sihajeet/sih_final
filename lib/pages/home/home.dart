@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sih_final/pages/askquestion/askquestion.dart';
+import 'package:sih_final/pages/chatbot/chatbot.dart';
 import 'package:sih_final/pages/employee/emplyee.dart';
 import 'package:sih_final/pages/subject/subject.dart';
 
@@ -44,24 +45,20 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Padding(
-          padding: const EdgeInsets.symmetric(
-              vertical: 5, horizontal: 10),
+          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
           child: Column(
             children: [
               const SizedBox(
                 height: 20,
               ),
               GridView(
-                physics:
-                    const NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
-                gridDelegate:
-                    SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount:
-                      MediaQuery.of(context).orientation ==
-                              Orientation.landscape
-                          ? 3
-                          : 2,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: MediaQuery.of(context).orientation ==
+                          Orientation.landscape
+                      ? 3
+                      : 2,
                   crossAxisSpacing: 20,
                   mainAxisSpacing: 30,
                   childAspectRatio: (2 / 2.5),
@@ -73,8 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     onpress: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) =>
-                            const SubjectScreen(),
+                        builder: (_) => const SubjectScreen(),
                       ),
                     ),
                   ),
@@ -84,8 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     onpress: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) =>
-                            const AskQuestionScreen(),
+                        builder: (_) => const AskQuestionScreen(),
                       ),
                     ),
                   ),
@@ -95,8 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     onpress: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) =>
-                            const EmployeScreen(),
+                        builder: (_) => const EmployeScreen(),
                       ),
                     ),
                   ),
@@ -106,8 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     onpress: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) =>
-                            const ResearchPage(),
+                        builder: (_) => const ResearchPage(),
                       ),
                     ),
                   ),
@@ -116,9 +109,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       title: "Community",
                       onpress: () {}),
                   homeCard(
-                      icon: Icons.chat_bubble_outlined,
-                      title: "Chat-Bot",
-                      onpress: () {}),
+                    icon: Icons.chat_bubble_outlined,
+                    title: "Chat-Bot",
+                    onpress: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const SectionChat(),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ],
@@ -141,8 +140,7 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Colors.grey.withOpacity(0.6),
               spreadRadius: 5,
               blurRadius: 7,
-              offset: const Offset(
-                  0, 1), // changes position of shadow
+              offset: const Offset(0, 1), // changes position of shadow
             ),
           ],
           borderRadius: BorderRadius.circular(10),
