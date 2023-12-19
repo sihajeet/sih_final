@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "563274150544",
+    "project_id": "sihproject-f7d4a",
+    "storage_bucket": "sihproject-f7d4a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563274150544:android:0c7deaedf0a1f816065e15",
+        "android_client_info": {
+          "package_name": "com.sih.ajeet.sih_final"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCngkn-OAW6cAVlnrusHQ0H-5BHQiN-YzU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

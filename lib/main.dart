@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
           ),
         ),
+        scaffoldBackgroundColor: const Color(0xFFEAF0FF),
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,

@@ -64,9 +64,7 @@ class _ResearchPageState extends State<ResearchPage> {
                           borderRadius: BorderRadius.circular(6),
                           child: CachedNetworkImage(
                             key: UniqueKey(),
-                            imageUrl:
-                                "https://i.ytimg.com/vi/${lecture['img']}/maxresdefault.jpg",
-                            // imageUrl: 'https://i.ytimg.com/vi/9ZsubirAEsQ/maxresdefault.jpg',
+                            imageUrl: "https://i.ytimg.com/vi/${lecture['img']}/maxresdefault.jpg",
                             width: double.maxFinite,
                             fit: BoxFit.contain,
                             placeholder: (context, url) => Shimmer.fromColors(
